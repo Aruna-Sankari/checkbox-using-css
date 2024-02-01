@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:15px;
+        }
+        h4{
+            font-size:28px;
+            text-transform: uppercase;
+        }
+        .form{
+            display:block;
+        }
+        .input-checkbox{
+            display:flex;
+            align-items: center;
+            margin:15px 0;
+        }
+        .input-checkbox input[type="checkbox"]{
+          appearance: none;
+          user-select: none;
+          width:35px;
+          height:35px;
+          border-radius: 5px;
+          border:2px solid black;
+        }
+        .input-checkbox label{
+            font-size:19px;
+            margin-left:13px;
+            font-weight: bold;
+        }
+        .input-checkbox input[type="checkbox"]:checked:before{
+            content:"";
+            font-weight:900;
+            font-size:30px;
+            height:100%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .check1 input[type="checkbox"]:checked:before {
+            content:"\2713";
+            color:rgb(4,105,4);
+            background-color:rgba(111,238,111,0.376);
+
+        }
+        .check2 input[type="checkbox"]:checked:before {
+            content:"\2715";
+            color:rgb(255,49,34);
+            background-color:rgba(250,151,114,0.376);
+
+        }
+        .check1 input[type="checkbox"]:checked{
+          border:none;
+
+        }
+        .check2 input[type="checkbox"]:checked{
+          border:none;
+        }
+        .check1 input[type="checkbox"]:checked+label{
+            color:rgb(4,105,4);
+        }
+        .check2 input[type="checkbox"]:checked+label{
+            color:rgb(255,49,34);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Custom Checkbox</h4>
+        <div class="form">
+            <div class="input-checkbox check1">
+                <input type="checkbox"  id="correct" checked >
+                <label for="correct">Correct Answer</label>
+
+            </div>
+            <div class="input-checkbox check2">
+                <input type="checkbox" id="wrong">
+                <label for="correct">Wrong Answer</label>
+
+                
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
